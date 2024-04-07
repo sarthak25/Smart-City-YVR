@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7c70051ed0819317c13ec1a3e4701668 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7c70051ed0819317c13ec1a3e4701668" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7c70051ed0819317c13ec1a3e4701668 = L.map(
+                "map_7c70051ed0819317c13ec1a3e4701668",
+                {
+                    center: [49.25203496000002, -123.02907283999997],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_575d342f84b23c3664346edf1d4681ed = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+            var heat_map_e90a98115337409b25c0751a7ce2f634 = L.heatLayer(
+                [[49.275476, -122.798723, 1953.0], [49.267674, -123.247621, 1863.0], [49.284786, -123.111191, 1857.0], [49.283818, -123.113429, 1720.0], [49.284493, -123.114994, 1638.0], [49.283461, -123.116549, 1638.0], [49.282317, -123.118291, 1624.0], [49.209383, -123.116116, 1542.0], [49.282472, -123.11137, 1465.0], [49.22639, -123.004928, 1457.0], [49.283753, -123.113589, 1394.0], [49.189699, -122.847774, 1353.0], [49.283765, -123.109649, 1337.0], [49.226277, -123.003299, 1281.0], [49.133676, -122.839219, 1280.0], [49.277584, -123.125372, 1220.0], [49.280784, -123.120537, 1220.0], [49.276487, -123.127092, 1220.0], [49.281733, -123.105366, 1212.0], [49.282221, -123.108043, 1212.0], [49.283085, -123.110279, 1212.0], [49.107721, -122.657685, 1211.0], [49.278877, -123.123712, 1205.0], [49.28266, -123.117951, 1205.0], [49.275854, -123.128375, 1205.0], [49.28172, -123.119373, 1205.0], [49.284039, -123.115939, 1205.0], [49.276786, -123.126905, 1205.0], [49.204778, -122.906118, 1185.0], [49.200021, -122.94894, 1185.0], [49.201406, -122.912573, 1185.0], [49.199857, -122.949711, 1183.0], [49.191632, -122.804013, 1182.0], [49.211909, -122.959156, 1168.0], [49.201459, -122.912629, 1165.0], [49.204859, -122.906187, 1165.0], [49.182677, -122.845166, 1165.0], [49.284575, -123.114596, 1160.0], [49.248484, -122.896952, 1157.0], [49.253364, -122.918218, 1157.0], [49.253465, -122.918191, 1141.0], [49.285962, -123.111516, 1133.0], [49.28558, -123.119598, 1133.0], [49.283193, -123.115674, 1132.0], [49.279271, -123.109109, 1131.0], [49.23843, -123.031759, 1131.0], [49.248334, -123.055868, 1131.0], [49.229798, -123.012613, 1131.0], [49.273172, -123.10035, 1131.0], [49.262311, -123.069077, 1131.0], [49.24431, -123.04608, 1131.0], [49.225852, -123.003876, 1131.0], [49.211945, -122.95904, 1130.0], [49.22011, -122.98844, 1130.0], [49.262317, -123.069179, 1129.0], [49.283136, -123.115744, 1129.0], [49.273099, -123.100399, 1129.0], [49.238353, -123.031827, 1129.0], [49.285907, -123.111578, 1129.0], [49.285634, -123.119515, 1129.0], [49.248283, -123.055904, 1129.0], [49.244236, -123.046136, 1129.0], [49.220013, -122.988475, 1129.0], [49.229712, -123.012678, 1129.0], [49.279178, -123.109213, 1129.0], [49.225781, -123.00394, 1129.0], [49.200083, -122.948971, 1117.0], [49.281799, -123.110618, 1116.0], [49.105966, -122.659978, 1112.0], [49.292951, -123.134018, 1105.0], [49.194098, -122.805781, 1103.0], [49.227271, -123.006974, 1100.0], [49.292217, -123.133397, 1092.0], [49.28129, -123.108213, 1088.0], [49.280707, -123.104998, 1088.0], [49.284791, -123.115231, 1075.0], [49.282442, -123.104634, 1071.0], [49.238592, -123.032425, 1066.0], [49.267853, -123.140145, 1065.0], [49.280927, -123.005171, 1050.0], [49.274252, -122.791893, 1042.0], [49.262926, -123.098697, 1042.0], [49.262593, -123.09009, 1042.0], [49.281362, -123.071174, 1038.0], [49.286121, -123.117245, 1034.0], [49.284435, -123.112367, 1021.0], [49.247428, -122.894766, 1003.0], [49.26367, -123.186028, 994.0], [49.281426, -123.099363, 992.0], [49.191596, -122.801592, 981.0], [49.280953, -123.013446, 978.0], [49.28264, -123.118529, 972.0], [49.260924, -122.781672, 969.0], [49.260938, -122.779124, 969.0], [49.209087, -123.116823, 966.0], [49.164174, -123.136423, 965.0], [49.326849, -123.13825, 964.0], [49.266827, -123.241849, 952.0], [49.260807, -122.781601, 947.0], [49.274107, -122.792389, 940.0]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+            var marker_c27366daf03c07f91250cec9d2690203 = L.marker(
+                [49.275476, -122.798723],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_4ccd313a079bcb09040396825b5012ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d79c558f6c8e0542f8581e052b8f8b00 = $(`<div id="html_d79c558f6c8e0542f8581e052b8f8b00" style="width: 100.0%; height: 100.0%;">Coquitlam Central Station @ Bay 10</div>`)[0];
+                popup_4ccd313a079bcb09040396825b5012ba.setContent(html_d79c558f6c8e0542f8581e052b8f8b00);
+            
+        
+
+        marker_c27366daf03c07f91250cec9d2690203.bindPopup(popup_4ccd313a079bcb09040396825b5012ba)
+        ;
+
+        
+    
+    
+            var marker_622d9507bc4db304215770a193ae4748 = L.marker(
+                [49.267674, -123.247621],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_d881abba4ae49b7b2dcee1034460bb58 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7dbda26a21783ca8bdac2d3937afe6e5 = $(`<div id="html_7dbda26a21783ca8bdac2d3937afe6e5" style="width: 100.0%; height: 100.0%;">UBC Exchange @ Unloading Only</div>`)[0];
+                popup_d881abba4ae49b7b2dcee1034460bb58.setContent(html_7dbda26a21783ca8bdac2d3937afe6e5);
+            
+        
+
+        marker_622d9507bc4db304215770a193ae4748.bindPopup(popup_d881abba4ae49b7b2dcee1034460bb58)
+        ;
+
+        
+    
+    
+            var marker_a7e8efe7f8fe59afe046a37953f9490d = L.marker(
+                [49.284786, -123.111191],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_2e8e090c89882374d1fddc4ba63f62db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_598bc877a728b22b1c33893fc1cf1084 = $(`<div id="html_598bc877a728b22b1c33893fc1cf1084" style="width: 100.0%; height: 100.0%;">Waterfront Station @ Bay 3</div>`)[0];
+                popup_2e8e090c89882374d1fddc4ba63f62db.setContent(html_598bc877a728b22b1c33893fc1cf1084);
+            
+        
+
+        marker_a7e8efe7f8fe59afe046a37953f9490d.bindPopup(popup_2e8e090c89882374d1fddc4ba63f62db)
+        ;
+
+        
+    
+    
+            var marker_bca9680abd08c41841a481d23a829551 = L.marker(
+                [49.283818, -123.113429],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_bf6138f0a6a053ae8f2928e7a050df52 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ff0e1b3eaeb69464a6fb36c3e95c2b4 = $(`<div id="html_1ff0e1b3eaeb69464a6fb36c3e95c2b4" style="width: 100.0%; height: 100.0%;">Westbound W Pender St @ Seymour St</div>`)[0];
+                popup_bf6138f0a6a053ae8f2928e7a050df52.setContent(html_1ff0e1b3eaeb69464a6fb36c3e95c2b4);
+            
+        
+
+        marker_bca9680abd08c41841a481d23a829551.bindPopup(popup_bf6138f0a6a053ae8f2928e7a050df52)
+        ;
+
+        
+    
+    
+            var marker_0014136dd3056f3004f869fe29de2c9b = L.marker(
+                [49.284493, -123.114994],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_9bcdbd0dee08e4142ad7e191023b0450 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95c55481da55200a1f1f1ce965833564 = $(`<div id="html_95c55481da55200a1f1f1ce965833564" style="width: 100.0%; height: 100.0%;">Northbound Granville St @ W Pender St</div>`)[0];
+                popup_9bcdbd0dee08e4142ad7e191023b0450.setContent(html_95c55481da55200a1f1f1ce965833564);
+            
+        
+
+        marker_0014136dd3056f3004f869fe29de2c9b.bindPopup(popup_9bcdbd0dee08e4142ad7e191023b0450)
+        ;
+
+        
+    
+    
+            var marker_b913a853ba7dfb02d1d7a0655bcfaab0 = L.marker(
+                [49.283461, -123.116549],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_474dbb5d6a53c11ace5b0b5aeed9d241 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_37054155e84d25a7f1ba7db1d40699ea = $(`<div id="html_37054155e84d25a7f1ba7db1d40699ea" style="width: 100.0%; height: 100.0%;">Northbound Granville St @ Dunsmuir St</div>`)[0];
+                popup_474dbb5d6a53c11ace5b0b5aeed9d241.setContent(html_37054155e84d25a7f1ba7db1d40699ea);
+            
+        
+
+        marker_b913a853ba7dfb02d1d7a0655bcfaab0.bindPopup(popup_474dbb5d6a53c11ace5b0b5aeed9d241)
+        ;
+
+        
+    
+    
+            var marker_3478ca8ac5971c5d6f0aa477526b3f60 = L.marker(
+                [49.282317, -123.118291],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_5662aae57844e6ca575d424dc5914bf7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_065c79ab5c47c8b4d79e612e497a52b3 = $(`<div id="html_065c79ab5c47c8b4d79e612e497a52b3" style="width: 100.0%; height: 100.0%;">Northbound Granville St @ W Georgia St</div>`)[0];
+                popup_5662aae57844e6ca575d424dc5914bf7.setContent(html_065c79ab5c47c8b4d79e612e497a52b3);
+            
+        
+
+        marker_3478ca8ac5971c5d6f0aa477526b3f60.bindPopup(popup_5662aae57844e6ca575d424dc5914bf7)
+        ;
+
+        
+    
+    
+            var marker_506c1c32a0febe529affa69b7b4b3607 = L.marker(
+                [49.209383, -123.116116],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_c962e41e8dbd36d5e2491270bae02c46 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d5835022afd4427125aa174cb7b8cca0 = $(`<div id="html_d5835022afd4427125aa174cb7b8cca0" style="width: 100.0%; height: 100.0%;">Marine Drive Station @ Bay 2</div>`)[0];
+                popup_c962e41e8dbd36d5e2491270bae02c46.setContent(html_d5835022afd4427125aa174cb7b8cca0);
+            
+        
+
+        marker_506c1c32a0febe529affa69b7b4b3607.bindPopup(popup_c962e41e8dbd36d5e2491270bae02c46)
+        ;
+
+        
+    
+    
+            var marker_133e8cfb4f61d92e00ad9190a1258367 = L.marker(
+                [49.282472, -123.11137],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_ec357e1c9ee9317a83f0b16c87b9aba9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7389c4900f4fc2394b952dfdfd89b8d0 = $(`<div id="html_7389c4900f4fc2394b952dfdfd89b8d0" style="width: 100.0%; height: 100.0%;">Westbound W Pender St @ Hamilton St</div>`)[0];
+                popup_ec357e1c9ee9317a83f0b16c87b9aba9.setContent(html_7389c4900f4fc2394b952dfdfd89b8d0);
+            
+        
+
+        marker_133e8cfb4f61d92e00ad9190a1258367.bindPopup(popup_ec357e1c9ee9317a83f0b16c87b9aba9)
+        ;
+
+        
+    
+    
+            var marker_6eecb648582caa8e122b7759f17bde6b = L.marker(
+                [49.22639, -123.004928],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_13e5545b73dbffda83512cbb9b72b78f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a455bbdd870199e0524978645361068 = $(`<div id="html_7a455bbdd870199e0524978645361068" style="width: 100.0%; height: 100.0%;">Metrotown Station @ Bay 10</div>`)[0];
+                popup_13e5545b73dbffda83512cbb9b72b78f.setContent(html_7a455bbdd870199e0524978645361068);
+            
+        
+
+        marker_6eecb648582caa8e122b7759f17bde6b.bindPopup(popup_13e5545b73dbffda83512cbb9b72b78f)
+        ;
+
+        
+    
+    
+            var marker_9722ab62116dbf9ce861673f27985635 = L.marker(
+                [49.283753, -123.113589],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_022f797d4f2567494d0303baadf2f45c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b569d1eea062a0290d634d860318e2c3 = $(`<div id="html_b569d1eea062a0290d634d860318e2c3" style="width: 100.0%; height: 100.0%;">Eastbound W Pender St @ Seymour St</div>`)[0];
+                popup_022f797d4f2567494d0303baadf2f45c.setContent(html_b569d1eea062a0290d634d860318e2c3);
+            
+        
+
+        marker_9722ab62116dbf9ce861673f27985635.bindPopup(popup_022f797d4f2567494d0303baadf2f45c)
+        ;
+
+        
+    
+    
+            var marker_2239b09d98652f8f2d07cce65bb58f82 = L.marker(
+                [49.189699, -122.847774],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_b5084f5d44c92b99e1b46ace882b0ab2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1b460ee2669083e7c591853d731e298 = $(`<div id="html_d1b460ee2669083e7c591853d731e298" style="width: 100.0%; height: 100.0%;">Surrey Central Station @ Bay 12</div>`)[0];
+                popup_b5084f5d44c92b99e1b46ace882b0ab2.setContent(html_d1b460ee2669083e7c591853d731e298);
+            
+        
+
+        marker_2239b09d98652f8f2d07cce65bb58f82.bindPopup(popup_b5084f5d44c92b99e1b46ace882b0ab2)
+        ;
+
+        
+    
+    
+            var marker_783ece48c127a50894bd66662fecc9b5 = L.marker(
+                [49.283765, -123.109649],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_bdb11001fc540620d72f4410b0059de0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3910bba9d3cf3fabd28a887db08ddfb0 = $(`<div id="html_3910bba9d3cf3fabd28a887db08ddfb0" style="width: 100.0%; height: 100.0%;">Eastbound W Cordova St @ Homer St</div>`)[0];
+                popup_bdb11001fc540620d72f4410b0059de0.setContent(html_3910bba9d3cf3fabd28a887db08ddfb0);
+            
+        
+
+        marker_783ece48c127a50894bd66662fecc9b5.bindPopup(popup_bdb11001fc540620d72f4410b0059de0)
+        ;
+
+        
+    
+    
+            var marker_c5381e500ed835c1ca9be6d24e913978 = L.marker(
+                [49.226277, -123.003299],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_bf7d78a609bd5d4ea7386966b801afb2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9a8c4e5ff171fead7b754cabef5c127 = $(`<div id="html_f9a8c4e5ff171fead7b754cabef5c127" style="width: 100.0%; height: 100.0%;">Metrotown Station @ Bay 1</div>`)[0];
+                popup_bf7d78a609bd5d4ea7386966b801afb2.setContent(html_f9a8c4e5ff171fead7b754cabef5c127);
+            
+        
+
+        marker_c5381e500ed835c1ca9be6d24e913978.bindPopup(popup_bf7d78a609bd5d4ea7386966b801afb2)
+        ;
+
+        
+    
+    
+            var marker_430315330596d10a01005fe5609b4012 = L.marker(
+                [49.133676, -122.839219],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_75fab2c04870f5eb39f838df73238288 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b516473896ee45031652028a72f349f = $(`<div id="html_3b516473896ee45031652028a72f349f" style="width: 100.0%; height: 100.0%;">Westbound 72 Ave @ 138 St</div>`)[0];
+                popup_75fab2c04870f5eb39f838df73238288.setContent(html_3b516473896ee45031652028a72f349f);
+            
+        
+
+        marker_430315330596d10a01005fe5609b4012.bindPopup(popup_75fab2c04870f5eb39f838df73238288)
+        ;
+
+        
+    
+    
+            var marker_79f7e7554d55c4ee4dee9df65ae7e0f8 = L.marker(
+                [49.277584, -123.125372],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_35e950c0f6d1d9e90e1f1a7e2089ae56 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95d5b2e23cd6807e0dbab1b38d38ed4e = $(`<div id="html_95d5b2e23cd6807e0dbab1b38d38ed4e" style="width: 100.0%; height: 100.0%;">Northbound Granville St @ Davie St</div>`)[0];
+                popup_35e950c0f6d1d9e90e1f1a7e2089ae56.setContent(html_95d5b2e23cd6807e0dbab1b38d38ed4e);
+            
+        
+
+        marker_79f7e7554d55c4ee4dee9df65ae7e0f8.bindPopup(popup_35e950c0f6d1d9e90e1f1a7e2089ae56)
+        ;
+
+        
+    
+    
+            var marker_0093185eff7a47d309bf097b7f065c15 = L.marker(
+                [49.280784, -123.120537],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_a2c1ed0c84999390da9e726cd2aef8f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e294249f84c11e9956b1b59c31e7e826 = $(`<div id="html_e294249f84c11e9956b1b59c31e7e826" style="width: 100.0%; height: 100.0%;">Northbound Granville St @ Smithe St</div>`)[0];
+                popup_a2c1ed0c84999390da9e726cd2aef8f9.setContent(html_e294249f84c11e9956b1b59c31e7e826);
+            
+        
+
+        marker_0093185eff7a47d309bf097b7f065c15.bindPopup(popup_a2c1ed0c84999390da9e726cd2aef8f9)
+        ;
+
+        
+    
+    
+            var marker_a3792cd8c0f9c036c19d89fe5f8caee5 = L.marker(
+                [49.276487, -123.127092],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_7087191fd03f35c7a635a48e197e5cd9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a13c0be5ab011af8f622ecf49c6dee59 = $(`<div id="html_a13c0be5ab011af8f622ecf49c6dee59" style="width: 100.0%; height: 100.0%;">Northbound Granville St @ Drake St</div>`)[0];
+                popup_7087191fd03f35c7a635a48e197e5cd9.setContent(html_a13c0be5ab011af8f622ecf49c6dee59);
+            
+        
+
+        marker_a3792cd8c0f9c036c19d89fe5f8caee5.bindPopup(popup_7087191fd03f35c7a635a48e197e5cd9)
+        ;
+
+        
+    
+    
+            var marker_7b515275dbc99f7f8dbbf559deed3491 = L.marker(
+                [49.281733, -123.105366],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_1a2c96708a508b7a9b525509688208be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9898e873263eb39529fd09929571349 = $(`<div id="html_d9898e873263eb39529fd09929571349" style="width: 100.0%; height: 100.0%;">Westbound W Hastings St @ Carrall St</div>`)[0];
+                popup_1a2c96708a508b7a9b525509688208be.setContent(html_d9898e873263eb39529fd09929571349);
+            
+        
+
+        marker_7b515275dbc99f7f8dbbf559deed3491.bindPopup(popup_1a2c96708a508b7a9b525509688208be)
+        ;
+
+        
+    
+    
+            var marker_96ed2e3bd51eea50d84babac3a2effbf = L.marker(
+                [49.282221, -123.108043],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_47936873e2ddd5af443d007704f9e521 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_147b4a6763d63f4c7604e7953a7ebc25 = $(`<div id="html_147b4a6763d63f4c7604e7953a7ebc25" style="width: 100.0%; height: 100.0%;">Westbound W Hastings St @ Abbott St</div>`)[0];
+                popup_47936873e2ddd5af443d007704f9e521.setContent(html_147b4a6763d63f4c7604e7953a7ebc25);
+            
+        
+
+        marker_96ed2e3bd51eea50d84babac3a2effbf.bindPopup(popup_47936873e2ddd5af443d007704f9e521)
+        ;
+
+        
+    
+    
+            var marker_3b203d0195f9ffc3e998f04b1b9e8c9a = L.marker(
+                [49.283085, -123.110279],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_2eb1f7107ac0fa580de25c672e537476 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d0f2be971c2b6658586285f2128bcefe = $(`<div id="html_d0f2be971c2b6658586285f2128bcefe" style="width: 100.0%; height: 100.0%;">Westbound W Hastings St @ Hamilton St</div>`)[0];
+                popup_2eb1f7107ac0fa580de25c672e537476.setContent(html_d0f2be971c2b6658586285f2128bcefe);
+            
+        
+
+        marker_3b203d0195f9ffc3e998f04b1b9e8c9a.bindPopup(popup_2eb1f7107ac0fa580de25c672e537476)
+        ;
+
+        
+    
+    
+            var marker_68045ee800f2ca290d0e0a04677db0a5 = L.marker(
+                [49.107721, -122.657685],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_0c0740b805e7240ee7182f462603d28a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d538e1258d8425863ae7a6921e135985 = $(`<div id="html_d538e1258d8425863ae7a6921e135985" style="width: 100.0%; height: 100.0%;">Eastbound Logan Ave @ 203A St</div>`)[0];
+                popup_0c0740b805e7240ee7182f462603d28a.setContent(html_d538e1258d8425863ae7a6921e135985);
+            
+        
+
+        marker_68045ee800f2ca290d0e0a04677db0a5.bindPopup(popup_0c0740b805e7240ee7182f462603d28a)
+        ;
+
+        
+    
+    
+            var marker_15a48e7a82cd383e89154ce534724618 = L.marker(
+                [49.278877, -123.123712],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_cc6882c5ee118cedd333a695f3280672 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_74a7963a37d6a0705d8bf6539a0e8b9e = $(`<div id="html_74a7963a37d6a0705d8bf6539a0e8b9e" style="width: 100.0%; height: 100.0%;">Southbound Granville St @ Nelson St</div>`)[0];
+                popup_cc6882c5ee118cedd333a695f3280672.setContent(html_74a7963a37d6a0705d8bf6539a0e8b9e);
+            
+        
+
+        marker_15a48e7a82cd383e89154ce534724618.bindPopup(popup_cc6882c5ee118cedd333a695f3280672)
+        ;
+
+        
+    
+    
+            var marker_1d2351732a61897b21ea498fb5d1bb73 = L.marker(
+                [49.28266, -123.117951],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_59c93d6d60eaf8d321dd7cdc52189e60 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2f75f93fe598fa0745616a851bab0ca = $(`<div id="html_e2f75f93fe598fa0745616a851bab0ca" style="width: 100.0%; height: 100.0%;">Southbound Granville St @ W Georgia St</div>`)[0];
+                popup_59c93d6d60eaf8d321dd7cdc52189e60.setContent(html_e2f75f93fe598fa0745616a851bab0ca);
+            
+        
+
+        marker_1d2351732a61897b21ea498fb5d1bb73.bindPopup(popup_59c93d6d60eaf8d321dd7cdc52189e60)
+        ;
+
+        
+    
+    
+            var marker_2bbc52d451130cc00568edd49e5443b3 = L.marker(
+                [49.275854, -123.128375],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_9bbf96dd94674f7b9fac174f1627775c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_449cbee8356e6ff74bd482b52800e8dc = $(`<div id="html_449cbee8356e6ff74bd482b52800e8dc" style="width: 100.0%; height: 100.0%;">Southbound Granville St @ Drake St</div>`)[0];
+                popup_9bbf96dd94674f7b9fac174f1627775c.setContent(html_449cbee8356e6ff74bd482b52800e8dc);
+            
+        
+
+        marker_2bbc52d451130cc00568edd49e5443b3.bindPopup(popup_9bbf96dd94674f7b9fac174f1627775c)
+        ;
+
+        
+    
+    
+            var marker_dd586cbff1a769f795c879738c0ccb7d = L.marker(
+                [49.28172, -123.119373],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_da3dce217aa61ec23ec3f02a98e6789a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7d068282c6557fbda63c38d33feb152 = $(`<div id="html_b7d068282c6557fbda63c38d33feb152" style="width: 100.0%; height: 100.0%;">Southbound Granville St @ Robson St</div>`)[0];
+                popup_da3dce217aa61ec23ec3f02a98e6789a.setContent(html_b7d068282c6557fbda63c38d33feb152);
+            
+        
+
+        marker_dd586cbff1a769f795c879738c0ccb7d.bindPopup(popup_da3dce217aa61ec23ec3f02a98e6789a)
+        ;
+
+        
+    
+    
+            var marker_4b4ea8872a540b9e04b5fb78453cbacc = L.marker(
+                [49.284039, -123.115939],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_179450463448d36349655409cc436bbc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_08ed113363106c4d9389a57fbebb1e35 = $(`<div id="html_08ed113363106c4d9389a57fbebb1e35" style="width: 100.0%; height: 100.0%;">Southbound Granville St @ W Pender St</div>`)[0];
+                popup_179450463448d36349655409cc436bbc.setContent(html_08ed113363106c4d9389a57fbebb1e35);
+            
+        
+
+        marker_4b4ea8872a540b9e04b5fb78453cbacc.bindPopup(popup_179450463448d36349655409cc436bbc)
+        ;
+
+        
+    
+    
+            var marker_32765e6a6161c348faccc0b319093237 = L.marker(
+                [49.276786, -123.126905],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_1e255b8d411425c57ea5ce6a9f81ffc9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dde954bc176c8cff0730ac2cb56e0564 = $(`<div id="html_dde954bc176c8cff0730ac2cb56e0564" style="width: 100.0%; height: 100.0%;">Southbound Granville St @ Davie St</div>`)[0];
+                popup_1e255b8d411425c57ea5ce6a9f81ffc9.setContent(html_dde954bc176c8cff0730ac2cb56e0564);
+            
+        
+
+        marker_32765e6a6161c348faccc0b319093237.bindPopup(popup_1e255b8d411425c57ea5ce6a9f81ffc9)
+        ;
+
+        
+    
+    
+            var marker_5c0663cef1fb0283376f54dd6896f40c = L.marker(
+                [49.204778, -122.906118],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_52dceae43e7374ebb4b64af6c5cd1b6d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d83b917c1a04d66768dae37bde0da92c = $(`<div id="html_d83b917c1a04d66768dae37bde0da92c" style="width: 100.0%; height: 100.0%;">Columbia Station @ Platform 2</div>`)[0];
+                popup_52dceae43e7374ebb4b64af6c5cd1b6d.setContent(html_d83b917c1a04d66768dae37bde0da92c);
+            
+        
+
+        marker_5c0663cef1fb0283376f54dd6896f40c.bindPopup(popup_52dceae43e7374ebb4b64af6c5cd1b6d)
+        ;
+
+        
+    
+    
+            var marker_b5d24b52e28437b63dbd21ee74382b2d = L.marker(
+                [49.200021, -122.94894],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_26955d5590bf05a73c5b27a1e76e384d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92ba1b5ef9eb047661c6c8e50a421558 = $(`<div id="html_92ba1b5ef9eb047661c6c8e50a421558" style="width: 100.0%; height: 100.0%;">22nd Street Station @ Platform 2</div>`)[0];
+                popup_26955d5590bf05a73c5b27a1e76e384d.setContent(html_92ba1b5ef9eb047661c6c8e50a421558);
+            
+        
+
+        marker_b5d24b52e28437b63dbd21ee74382b2d.bindPopup(popup_26955d5590bf05a73c5b27a1e76e384d)
+        ;
+
+        
+    
+    
+            var marker_4d8326f695ee6cb9ce98e405c7f98aae = L.marker(
+                [49.201406, -122.912573],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_f8f845e6c5f1b6bfa50c35adca29138d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_460f463c5c590b0aac30c2c7f1f271d4 = $(`<div id="html_460f463c5c590b0aac30c2c7f1f271d4" style="width: 100.0%; height: 100.0%;">New Westminster Station @ Platform 2</div>`)[0];
+                popup_f8f845e6c5f1b6bfa50c35adca29138d.setContent(html_460f463c5c590b0aac30c2c7f1f271d4);
+            
+        
+
+        marker_4d8326f695ee6cb9ce98e405c7f98aae.bindPopup(popup_f8f845e6c5f1b6bfa50c35adca29138d)
+        ;
+
+        
+    
+    
+            var marker_883f86b8e483a636aae793e50a7aeacb = L.marker(
+                [49.199857, -122.949711],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_52d0170f822ab4e85ef532c11c10cff4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b793195c0230006528a6739c3ad87792 = $(`<div id="html_b793195c0230006528a6739c3ad87792" style="width: 100.0%; height: 100.0%;">22nd Street Station @ Unloading Only</div>`)[0];
+                popup_52d0170f822ab4e85ef532c11c10cff4.setContent(html_b793195c0230006528a6739c3ad87792);
+            
+        
+
+        marker_883f86b8e483a636aae793e50a7aeacb.bindPopup(popup_52d0170f822ab4e85ef532c11c10cff4)
+        ;
+
+        
+    
+    
+            var marker_6545d70322c49ed970a3c2eca1a24dc7 = L.marker(
+                [49.191632, -122.804013],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_82c78d25c85c3d2300c13fd7181f6845 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_066d5b65e79bcd1ba1c93505242ff588 = $(`<div id="html_066d5b65e79bcd1ba1c93505242ff588" style="width: 100.0%; height: 100.0%;">Guildford Exchange @ Bay 2</div>`)[0];
+                popup_82c78d25c85c3d2300c13fd7181f6845.setContent(html_066d5b65e79bcd1ba1c93505242ff588);
+            
+        
+
+        marker_6545d70322c49ed970a3c2eca1a24dc7.bindPopup(popup_82c78d25c85c3d2300c13fd7181f6845)
+        ;
+
+        
+    
+    
+            var marker_65d9a7bf6a79ee2168eee403b8211bc7 = L.marker(
+                [49.211909, -122.959156],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_0b9219be1cd6b1615c4f3d7241aab78d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ada99df7a09123a5a9618619b45c530 = $(`<div id="html_0ada99df7a09123a5a9618619b45c530" style="width: 100.0%; height: 100.0%;">Edmonds Station @ Platform 2</div>`)[0];
+                popup_0b9219be1cd6b1615c4f3d7241aab78d.setContent(html_0ada99df7a09123a5a9618619b45c530);
+            
+        
+
+        marker_65d9a7bf6a79ee2168eee403b8211bc7.bindPopup(popup_0b9219be1cd6b1615c4f3d7241aab78d)
+        ;
+
+        
+    
+    
+            var marker_be7a098f7e152586c6cf1fb7d2b6402c = L.marker(
+                [49.201459, -122.912629],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_b24378faa1159b256f2e2582adc08e23 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_767578dcbe7f7d1ec050750a9729ee05 = $(`<div id="html_767578dcbe7f7d1ec050750a9729ee05" style="width: 100.0%; height: 100.0%;">New Westminster Station @ Platform 1</div>`)[0];
+                popup_b24378faa1159b256f2e2582adc08e23.setContent(html_767578dcbe7f7d1ec050750a9729ee05);
+            
+        
+
+        marker_be7a098f7e152586c6cf1fb7d2b6402c.bindPopup(popup_b24378faa1159b256f2e2582adc08e23)
+        ;
+
+        
+    
+    
+            var marker_863e853c5a6d9251fa98c6d331b635b4 = L.marker(
+                [49.204859, -122.906187],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_0a875a4b05e969b0e41de326315139bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5dee9760a76c8d95413b8ba28fa6b5fb = $(`<div id="html_5dee9760a76c8d95413b8ba28fa6b5fb" style="width: 100.0%; height: 100.0%;">Columbia Station @ Platform 1</div>`)[0];
+                popup_0a875a4b05e969b0e41de326315139bd.setContent(html_5dee9760a76c8d95413b8ba28fa6b5fb);
+            
+        
+
+        marker_863e853c5a6d9251fa98c6d331b635b4.bindPopup(popup_0a875a4b05e969b0e41de326315139bd)
+        ;
+
+        
+    
+    
+            var marker_7a3ffcc32f2cf1a09a11149cabc281a8 = L.marker(
+                [49.182677, -122.845166],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_47641821ea38f65a33c7b6d4f6388b53 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9f88a0522c8a5232d42a61fe9cca6b3 = $(`<div id="html_f9f88a0522c8a5232d42a61fe9cca6b3" style="width: 100.0%; height: 100.0%;">King George Station @ Bay 4</div>`)[0];
+                popup_47641821ea38f65a33c7b6d4f6388b53.setContent(html_f9f88a0522c8a5232d42a61fe9cca6b3);
+            
+        
+
+        marker_7a3ffcc32f2cf1a09a11149cabc281a8.bindPopup(popup_47641821ea38f65a33c7b6d4f6388b53)
+        ;
+
+        
+    
+    
+            var marker_6d42bf3d736675915ec53fac8cf163e4 = L.marker(
+                [49.284575, -123.114596],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_9adc6da9dbe2e813f143fd4793aabdf0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f6b6f3c4f174c234fd842a4dc05c4d46 = $(`<div id="html_f6b6f3c4f174c234fd842a4dc05c4d46" style="width: 100.0%; height: 100.0%;">Westbound W Pender St @ Granville St</div>`)[0];
+                popup_9adc6da9dbe2e813f143fd4793aabdf0.setContent(html_f6b6f3c4f174c234fd842a4dc05c4d46);
+            
+        
+
+        marker_6d42bf3d736675915ec53fac8cf163e4.bindPopup(popup_9adc6da9dbe2e813f143fd4793aabdf0)
+        ;
+
+        
+    
+    
+            var marker_3fcc8ceffc4eee9cab545cce7c0879cc = L.marker(
+                [49.248484, -122.896952],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_0a3c8e2ccddacb8f0e21ac09e2a14aa3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7ecfee1f9b6d2077726b9c9521c4fcf = $(`<div id="html_b7ecfee1f9b6d2077726b9c9521c4fcf" style="width: 100.0%; height: 100.0%;">Lougheed Town Centre Station @ Platform 1</div>`)[0];
+                popup_0a3c8e2ccddacb8f0e21ac09e2a14aa3.setContent(html_b7ecfee1f9b6d2077726b9c9521c4fcf);
+            
+        
+
+        marker_3fcc8ceffc4eee9cab545cce7c0879cc.bindPopup(popup_0a3c8e2ccddacb8f0e21ac09e2a14aa3)
+        ;
+
+        
+    
+    
+            var marker_9bb8474017e47a50fbae3666c168645a = L.marker(
+                [49.253364, -122.918218],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_d6b7ea1311cb6026930ac524cb6352aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3b3c964f5c7cb2823760035d051ac12 = $(`<div id="html_f3b3c964f5c7cb2823760035d051ac12" style="width: 100.0%; height: 100.0%;">Production Way-University Station @ Platform 2</div>`)[0];
+                popup_d6b7ea1311cb6026930ac524cb6352aa.setContent(html_f3b3c964f5c7cb2823760035d051ac12);
+            
+        
+
+        marker_9bb8474017e47a50fbae3666c168645a.bindPopup(popup_d6b7ea1311cb6026930ac524cb6352aa)
+        ;
+
+        
+    
+    
+            var marker_d508fde6c4585c2c388d6b4e5f73517f = L.marker(
+                [49.253465, -122.918191],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_92057aa9c29c9699e25ec387ad7ae806 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f0c81fdced534b5fffe05a9c5bdc6a6 = $(`<div id="html_8f0c81fdced534b5fffe05a9c5bdc6a6" style="width: 100.0%; height: 100.0%;">Production Way-University Station @ Platform 1</div>`)[0];
+                popup_92057aa9c29c9699e25ec387ad7ae806.setContent(html_8f0c81fdced534b5fffe05a9c5bdc6a6);
+            
+        
+
+        marker_d508fde6c4585c2c388d6b4e5f73517f.bindPopup(popup_92057aa9c29c9699e25ec387ad7ae806)
+        ;
+
+        
+    
+    
+            var marker_c6a62f96f3d7515c37e64a4d50b1ba63 = L.marker(
+                [49.285962, -123.111516],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_7793906df1bb00316e34383ac8dff9dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e514f87318c420772ea73458f4cd6d01 = $(`<div id="html_e514f87318c420772ea73458f4cd6d01" style="width: 100.0%; height: 100.0%;">Waterfront Station @ Platform 1</div>`)[0];
+                popup_7793906df1bb00316e34383ac8dff9dc.setContent(html_e514f87318c420772ea73458f4cd6d01);
+            
+        
+
+        marker_c6a62f96f3d7515c37e64a4d50b1ba63.bindPopup(popup_7793906df1bb00316e34383ac8dff9dc)
+        ;
+
+        
+    
+    
+            var marker_8859d60a6b0febea0b7a7c3d81dcc186 = L.marker(
+                [49.28558, -123.119598],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_a297d4f8fbfa969dc3021d1a328b59d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_252b833ab2074e4e929591642864735c = $(`<div id="html_252b833ab2074e4e929591642864735c" style="width: 100.0%; height: 100.0%;">Burrard Station @ Platform 1</div>`)[0];
+                popup_a297d4f8fbfa969dc3021d1a328b59d3.setContent(html_252b833ab2074e4e929591642864735c);
+            
+        
+
+        marker_8859d60a6b0febea0b7a7c3d81dcc186.bindPopup(popup_a297d4f8fbfa969dc3021d1a328b59d3)
+        ;
+
+        
+    
+    
+            var marker_df27cb90d9d1a88d7a3cff2fd361e4ae = L.marker(
+                [49.283193, -123.115674],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_e715563ed2a032c1e12f3bcd69aad08a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1d3aed96865b8d5e368ea588a5b9925 = $(`<div id="html_f1d3aed96865b8d5e368ea588a5b9925" style="width: 100.0%; height: 100.0%;">Granville Station @ Platform 1</div>`)[0];
+                popup_e715563ed2a032c1e12f3bcd69aad08a.setContent(html_f1d3aed96865b8d5e368ea588a5b9925);
+            
+        
+
+        marker_df27cb90d9d1a88d7a3cff2fd361e4ae.bindPopup(popup_e715563ed2a032c1e12f3bcd69aad08a)
+        ;
+
+        
+    
+    
+            var marker_1160d39dcb2bbc94d501435816fdaffd = L.marker(
+                [49.279271, -123.109109],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_a4b969492a71d0e473a89e46c677928b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_10c59bea36142a994afdaf174ee0a8d9 = $(`<div id="html_10c59bea36142a994afdaf174ee0a8d9" style="width: 100.0%; height: 100.0%;">Stadium-Chinatown Station @ Platform 1</div>`)[0];
+                popup_a4b969492a71d0e473a89e46c677928b.setContent(html_10c59bea36142a994afdaf174ee0a8d9);
+            
+        
+
+        marker_1160d39dcb2bbc94d501435816fdaffd.bindPopup(popup_a4b969492a71d0e473a89e46c677928b)
+        ;
+
+        
+    
+    
+            var marker_07fbff97c34423f6d7ec15d5b191cde9 = L.marker(
+                [49.23843, -123.031759],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_1a7b85ec29e4ff5d1031a3a66024e99b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0becca46b8e40ba479a475ca31b323be = $(`<div id="html_0becca46b8e40ba479a475ca31b323be" style="width: 100.0%; height: 100.0%;">Joyce-Collingwood Station @ Platform 1</div>`)[0];
+                popup_1a7b85ec29e4ff5d1031a3a66024e99b.setContent(html_0becca46b8e40ba479a475ca31b323be);
+            
+        
+
+        marker_07fbff97c34423f6d7ec15d5b191cde9.bindPopup(popup_1a7b85ec29e4ff5d1031a3a66024e99b)
+        ;
+
+        
+    
+    
+            var marker_f0ab190bb59deaf7b2ea818e4d9f6967 = L.marker(
+                [49.248334, -123.055868],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_74236a6d516b4339df846a87fed994db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88698c69a0bf047a0abed4c17166bb7f = $(`<div id="html_88698c69a0bf047a0abed4c17166bb7f" style="width: 100.0%; height: 100.0%;">Nanaimo Station @ Platform 1</div>`)[0];
+                popup_74236a6d516b4339df846a87fed994db.setContent(html_88698c69a0bf047a0abed4c17166bb7f);
+            
+        
+
+        marker_f0ab190bb59deaf7b2ea818e4d9f6967.bindPopup(popup_74236a6d516b4339df846a87fed994db)
+        ;
+
+        
+    
+    
+            var marker_3e1f63b981324ecba1d7988ad9dba816 = L.marker(
+                [49.229798, -123.012613],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_7b4363c863531e448d0d23bfff5d5d62 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e428a9401ccb5d8e3639313b65fdc7dd = $(`<div id="html_e428a9401ccb5d8e3639313b65fdc7dd" style="width: 100.0%; height: 100.0%;">Patterson Station @ Platform 1</div>`)[0];
+                popup_7b4363c863531e448d0d23bfff5d5d62.setContent(html_e428a9401ccb5d8e3639313b65fdc7dd);
+            
+        
+
+        marker_3e1f63b981324ecba1d7988ad9dba816.bindPopup(popup_7b4363c863531e448d0d23bfff5d5d62)
+        ;
+
+        
+    
+    
+            var marker_77ceb0f8fd39ca35ec76e7b36a6c3aa7 = L.marker(
+                [49.273172, -123.10035],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_166b30720a285579ccb26d58df434b88 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be3b32b65cf0e400f029215471592631 = $(`<div id="html_be3b32b65cf0e400f029215471592631" style="width: 100.0%; height: 100.0%;">Main Street-Science World Station @ Platform 1</div>`)[0];
+                popup_166b30720a285579ccb26d58df434b88.setContent(html_be3b32b65cf0e400f029215471592631);
+            
+        
+
+        marker_77ceb0f8fd39ca35ec76e7b36a6c3aa7.bindPopup(popup_166b30720a285579ccb26d58df434b88)
+        ;
+
+        
+    
+    
+            var marker_a9217f3cde938e32e896f87d6402bc42 = L.marker(
+                [49.262311, -123.069077],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_d2bb37b80f8cf3602eeaf8bbf5b83e8e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_29a652bc51e50550776649c7d610f9e5 = $(`<div id="html_29a652bc51e50550776649c7d610f9e5" style="width: 100.0%; height: 100.0%;">Commercial-Broadway Station @ Platform 3</div>`)[0];
+                popup_d2bb37b80f8cf3602eeaf8bbf5b83e8e.setContent(html_29a652bc51e50550776649c7d610f9e5);
+            
+        
+
+        marker_a9217f3cde938e32e896f87d6402bc42.bindPopup(popup_d2bb37b80f8cf3602eeaf8bbf5b83e8e)
+        ;
+
+        
+    
+    
+            var marker_1427e1fab071260b5cc0265abf95343d = L.marker(
+                [49.24431, -123.04608],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_7f1c6e1792a15ee916838f20dc09b5fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1aa80cd00e6055c13a4149233c324b8 = $(`<div id="html_f1aa80cd00e6055c13a4149233c324b8" style="width: 100.0%; height: 100.0%;">29th Avenue Station @ Platform 1</div>`)[0];
+                popup_7f1c6e1792a15ee916838f20dc09b5fc.setContent(html_f1aa80cd00e6055c13a4149233c324b8);
+            
+        
+
+        marker_1427e1fab071260b5cc0265abf95343d.bindPopup(popup_7f1c6e1792a15ee916838f20dc09b5fc)
+        ;
+
+        
+    
+    
+            var marker_21ee8c5b3d9082e621b1c2cd7379e36e = L.marker(
+                [49.225852, -123.003876],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_ea3a65cefcce55356ce21a891b991856 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e9a24b3ddd0dddd9217e8d95db1e811 = $(`<div id="html_4e9a24b3ddd0dddd9217e8d95db1e811" style="width: 100.0%; height: 100.0%;">Metrotown Station @ Platform 1</div>`)[0];
+                popup_ea3a65cefcce55356ce21a891b991856.setContent(html_4e9a24b3ddd0dddd9217e8d95db1e811);
+            
+        
+
+        marker_21ee8c5b3d9082e621b1c2cd7379e36e.bindPopup(popup_ea3a65cefcce55356ce21a891b991856)
+        ;
+
+        
+    
+    
+            var marker_753eb1cd0fe8e1692b16503b8065a884 = L.marker(
+                [49.211945, -122.95904],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_f0ee2fa8127ee0ad6ea1699e325226ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b149851240d920709bb867c0ab642dd3 = $(`<div id="html_b149851240d920709bb867c0ab642dd3" style="width: 100.0%; height: 100.0%;">Edmonds Station @ Platform 1</div>`)[0];
+                popup_f0ee2fa8127ee0ad6ea1699e325226ce.setContent(html_b149851240d920709bb867c0ab642dd3);
+            
+        
+
+        marker_753eb1cd0fe8e1692b16503b8065a884.bindPopup(popup_f0ee2fa8127ee0ad6ea1699e325226ce)
+        ;
+
+        
+    
+    
+            var marker_b7b4fcf0b0414cbc2cfccc84a61eba9b = L.marker(
+                [49.22011, -122.98844],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_8104af02a817f328bc46b4e74b703316 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a572383b0558fff39f7f58d4220acd2a = $(`<div id="html_a572383b0558fff39f7f58d4220acd2a" style="width: 100.0%; height: 100.0%;">Royal Oak Station @ Platform 1</div>`)[0];
+                popup_8104af02a817f328bc46b4e74b703316.setContent(html_a572383b0558fff39f7f58d4220acd2a);
+            
+        
+
+        marker_b7b4fcf0b0414cbc2cfccc84a61eba9b.bindPopup(popup_8104af02a817f328bc46b4e74b703316)
+        ;
+
+        
+    
+    
+            var marker_2df3b9a7e6563952e9a0f4a38a52b78f = L.marker(
+                [49.262317, -123.069179],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_42bf2e2e61887d2718500fa14d1db498 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a56c0196b8ca10e2d2c9e782514e0760 = $(`<div id="html_a56c0196b8ca10e2d2c9e782514e0760" style="width: 100.0%; height: 100.0%;">Commercial-Broadway Station @ Platform 4</div>`)[0];
+                popup_42bf2e2e61887d2718500fa14d1db498.setContent(html_a56c0196b8ca10e2d2c9e782514e0760);
+            
+        
+
+        marker_2df3b9a7e6563952e9a0f4a38a52b78f.bindPopup(popup_42bf2e2e61887d2718500fa14d1db498)
+        ;
+
+        
+    
+    
+            var marker_9d45d4019192138520711d024a210b78 = L.marker(
+                [49.283136, -123.115744],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_197de7bece4024a6b3701bc036ed32c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_089518e0409de33ddb0cb3b72920a35a = $(`<div id="html_089518e0409de33ddb0cb3b72920a35a" style="width: 100.0%; height: 100.0%;">Granville Station @ Platform 2</div>`)[0];
+                popup_197de7bece4024a6b3701bc036ed32c3.setContent(html_089518e0409de33ddb0cb3b72920a35a);
+            
+        
+
+        marker_9d45d4019192138520711d024a210b78.bindPopup(popup_197de7bece4024a6b3701bc036ed32c3)
+        ;
+
+        
+    
+    
+            var marker_4a1392b3a5d02046c0fb0444d2a074af = L.marker(
+                [49.273099, -123.100399],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_7b799072497365dfa7106ab3add06d52 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_42e14064df2c0fc76378b36f50e2b7f7 = $(`<div id="html_42e14064df2c0fc76378b36f50e2b7f7" style="width: 100.0%; height: 100.0%;">Main Street-Science World Station @ Platform 2</div>`)[0];
+                popup_7b799072497365dfa7106ab3add06d52.setContent(html_42e14064df2c0fc76378b36f50e2b7f7);
+            
+        
+
+        marker_4a1392b3a5d02046c0fb0444d2a074af.bindPopup(popup_7b799072497365dfa7106ab3add06d52)
+        ;
+
+        
+    
+    
+            var marker_f23844eef0ce7cd781f8f67ac12ada79 = L.marker(
+                [49.238353, -123.031827],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_b04ae9b081eaba440261ea390f8dcc7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f21e43fe34f37704c5e03654403bde3f = $(`<div id="html_f21e43fe34f37704c5e03654403bde3f" style="width: 100.0%; height: 100.0%;">Joyce-Collingwood Station @ Platform 2</div>`)[0];
+                popup_b04ae9b081eaba440261ea390f8dcc7a.setContent(html_f21e43fe34f37704c5e03654403bde3f);
+            
+        
+
+        marker_f23844eef0ce7cd781f8f67ac12ada79.bindPopup(popup_b04ae9b081eaba440261ea390f8dcc7a)
+        ;
+
+        
+    
+    
+            var marker_5ebba63bd24016df1bafca113cd74ac1 = L.marker(
+                [49.285907, -123.111578],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_5bdb097047dbc32921182d65a0bb3088 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_19167f264f75526c6f216dc794923fdd = $(`<div id="html_19167f264f75526c6f216dc794923fdd" style="width: 100.0%; height: 100.0%;">Waterfront Station @ Platform 2</div>`)[0];
+                popup_5bdb097047dbc32921182d65a0bb3088.setContent(html_19167f264f75526c6f216dc794923fdd);
+            
+        
+
+        marker_5ebba63bd24016df1bafca113cd74ac1.bindPopup(popup_5bdb097047dbc32921182d65a0bb3088)
+        ;
+
+        
+    
+    
+            var marker_a3244f0bc20428e52c5b4f7f81544f4f = L.marker(
+                [49.285634, -123.119515],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_7a72ad05cd9bf7cb856c5a89521ceb72 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d8d2afca2f31a539f7202efd9f8e1477 = $(`<div id="html_d8d2afca2f31a539f7202efd9f8e1477" style="width: 100.0%; height: 100.0%;">Burrard Station @ Platform 2</div>`)[0];
+                popup_7a72ad05cd9bf7cb856c5a89521ceb72.setContent(html_d8d2afca2f31a539f7202efd9f8e1477);
+            
+        
+
+        marker_a3244f0bc20428e52c5b4f7f81544f4f.bindPopup(popup_7a72ad05cd9bf7cb856c5a89521ceb72)
+        ;
+
+        
+    
+    
+            var marker_957c2a41bf2ebd185921d4758723728f = L.marker(
+                [49.248283, -123.055904],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_44810ca8708dbd725fdad0db4e977106 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2cfe46e4c344a53525a620f9977965d6 = $(`<div id="html_2cfe46e4c344a53525a620f9977965d6" style="width: 100.0%; height: 100.0%;">Nanaimo Station @ Platform 2</div>`)[0];
+                popup_44810ca8708dbd725fdad0db4e977106.setContent(html_2cfe46e4c344a53525a620f9977965d6);
+            
+        
+
+        marker_957c2a41bf2ebd185921d4758723728f.bindPopup(popup_44810ca8708dbd725fdad0db4e977106)
+        ;
+
+        
+    
+    
+            var marker_84c7a093ef522982bcc9808541dfdf35 = L.marker(
+                [49.244236, -123.046136],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_67330af21ba2e36ef479535a221a7aa3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d05a9655d4e7b39ac73b328c35199be1 = $(`<div id="html_d05a9655d4e7b39ac73b328c35199be1" style="width: 100.0%; height: 100.0%;">29th Avenue Station @ Platform 2</div>`)[0];
+                popup_67330af21ba2e36ef479535a221a7aa3.setContent(html_d05a9655d4e7b39ac73b328c35199be1);
+            
+        
+
+        marker_84c7a093ef522982bcc9808541dfdf35.bindPopup(popup_67330af21ba2e36ef479535a221a7aa3)
+        ;
+
+        
+    
+    
+            var marker_3c7df1c91e3b2714439c427be9599309 = L.marker(
+                [49.220013, -122.988475],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_ec7f361843171d74a38ddc4252ebe597 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f154f2bbf09878c73f290696a8a99354 = $(`<div id="html_f154f2bbf09878c73f290696a8a99354" style="width: 100.0%; height: 100.0%;">Royal Oak Station @ Platform 2</div>`)[0];
+                popup_ec7f361843171d74a38ddc4252ebe597.setContent(html_f154f2bbf09878c73f290696a8a99354);
+            
+        
+
+        marker_3c7df1c91e3b2714439c427be9599309.bindPopup(popup_ec7f361843171d74a38ddc4252ebe597)
+        ;
+
+        
+    
+    
+            var marker_58e9e69c2507d696a0b6b41ffa844592 = L.marker(
+                [49.229712, -123.012678],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_c8d3cb26b6983cb3f72f51ccb984834b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e3f77a4664d7869076a0480bfb4fedc = $(`<div id="html_4e3f77a4664d7869076a0480bfb4fedc" style="width: 100.0%; height: 100.0%;">Patterson Station @ Platform 2</div>`)[0];
+                popup_c8d3cb26b6983cb3f72f51ccb984834b.setContent(html_4e3f77a4664d7869076a0480bfb4fedc);
+            
+        
+
+        marker_58e9e69c2507d696a0b6b41ffa844592.bindPopup(popup_c8d3cb26b6983cb3f72f51ccb984834b)
+        ;
+
+        
+    
+    
+            var marker_dee2437602a915b1316b3e8d4ae020c4 = L.marker(
+                [49.279178, -123.109213],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_87f7dd37dd55f3ae9fa9d08dab67f384 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c60e3a331f78f1d23e6cc6b9456b217a = $(`<div id="html_c60e3a331f78f1d23e6cc6b9456b217a" style="width: 100.0%; height: 100.0%;">Stadium-Chinatown Station @ Platform 2</div>`)[0];
+                popup_87f7dd37dd55f3ae9fa9d08dab67f384.setContent(html_c60e3a331f78f1d23e6cc6b9456b217a);
+            
+        
+
+        marker_dee2437602a915b1316b3e8d4ae020c4.bindPopup(popup_87f7dd37dd55f3ae9fa9d08dab67f384)
+        ;
+
+        
+    
+    
+            var marker_95dcdcccf30d2fd5b2e6abd461790348 = L.marker(
+                [49.225781, -123.00394],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_79a7a90a36d5d478d64e4a708812c539 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cdea17e47885d6be22b09d7a538d30ab = $(`<div id="html_cdea17e47885d6be22b09d7a538d30ab" style="width: 100.0%; height: 100.0%;">Metrotown Station @ Platform 2</div>`)[0];
+                popup_79a7a90a36d5d478d64e4a708812c539.setContent(html_cdea17e47885d6be22b09d7a538d30ab);
+            
+        
+
+        marker_95dcdcccf30d2fd5b2e6abd461790348.bindPopup(popup_79a7a90a36d5d478d64e4a708812c539)
+        ;
+
+        
+    
+    
+            var marker_8954c7a8cabc07f86cb728aa5e08357a = L.marker(
+                [49.200083, -122.948971],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_28f90f6215d9bb77d41d3465ced90097 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_688eb27343b3d673407817e93059c987 = $(`<div id="html_688eb27343b3d673407817e93059c987" style="width: 100.0%; height: 100.0%;">22nd Street Station @ Platform 1</div>`)[0];
+                popup_28f90f6215d9bb77d41d3465ced90097.setContent(html_688eb27343b3d673407817e93059c987);
+            
+        
+
+        marker_8954c7a8cabc07f86cb728aa5e08357a.bindPopup(popup_28f90f6215d9bb77d41d3465ced90097)
+        ;
+
+        
+    
+    
+            var marker_9ecf32e7bd6d6e5037bc7028de46aca3 = L.marker(
+                [49.281799, -123.110618],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_ff42ae443b825f98f2e0689aa518b04c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c7aa0de05b132bf8497c1c179541897 = $(`<div id="html_6c7aa0de05b132bf8497c1c179541897" style="width: 100.0%; height: 100.0%;">Eastbound W Pender St @ Hamilton St</div>`)[0];
+                popup_ff42ae443b825f98f2e0689aa518b04c.setContent(html_6c7aa0de05b132bf8497c1c179541897);
+            
+        
+
+        marker_9ecf32e7bd6d6e5037bc7028de46aca3.bindPopup(popup_ff42ae443b825f98f2e0689aa518b04c)
+        ;
+
+        
+    
+    
+            var marker_129d63204870ae64517e6387a3c948e7 = L.marker(
+                [49.105966, -122.659978],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_c9e7226a86e6b4270608e6bbd780ed04 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef66a351825a3f9303ec1bf4be0c0c85 = $(`<div id="html_ef66a351825a3f9303ec1bf4be0c0c85" style="width: 100.0%; height: 100.0%;">Northbound 203 St @ Fraser Hwy</div>`)[0];
+                popup_c9e7226a86e6b4270608e6bbd780ed04.setContent(html_ef66a351825a3f9303ec1bf4be0c0c85);
+            
+        
+
+        marker_129d63204870ae64517e6387a3c948e7.bindPopup(popup_c9e7226a86e6b4270608e6bbd780ed04)
+        ;
+
+        
+    
+    
+            var marker_8354601cb819ad2986b9c704a3643ff7 = L.marker(
+                [49.292951, -123.134018],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_77df38013b6cfb046a41f2153ee61ccd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_66f18b050b5c282aae7b64d0b6edcbd0 = $(`<div id="html_66f18b050b5c282aae7b64d0b6edcbd0" style="width: 100.0%; height: 100.0%;">Westbound W Georgia St @ Denman St</div>`)[0];
+                popup_77df38013b6cfb046a41f2153ee61ccd.setContent(html_66f18b050b5c282aae7b64d0b6edcbd0);
+            
+        
+
+        marker_8354601cb819ad2986b9c704a3643ff7.bindPopup(popup_77df38013b6cfb046a41f2153ee61ccd)
+        ;
+
+        
+    
+    
+            var marker_e3598a6482bb42fb60c9bc0ceb24e989 = L.marker(
+                [49.194098, -122.805781],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_dad621ca394f15a45f6c449576462395 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e0e4a536ec0ad0aa6bf2c6891102f16 = $(`<div id="html_5e0e4a536ec0ad0aa6bf2c6891102f16" style="width: 100.0%; height: 100.0%;">Eastbound 105 Ave @ 150 St</div>`)[0];
+                popup_dad621ca394f15a45f6c449576462395.setContent(html_5e0e4a536ec0ad0aa6bf2c6891102f16);
+            
+        
+
+        marker_e3598a6482bb42fb60c9bc0ceb24e989.bindPopup(popup_dad621ca394f15a45f6c449576462395)
+        ;
+
+        
+    
+    
+            var marker_8a2967570fe36d1f17a56fe40d53dc21 = L.marker(
+                [49.227271, -123.006974],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_5916edb2bc6c152553fb0452098e94d0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25861d4bd4661f2304eb09073abebe0b = $(`<div id="html_25861d4bd4661f2304eb09073abebe0b" style="width: 100.0%; height: 100.0%;">Eastbound Central Blvd @ Willingdon Ave</div>`)[0];
+                popup_5916edb2bc6c152553fb0452098e94d0.setContent(html_25861d4bd4661f2304eb09073abebe0b);
+            
+        
+
+        marker_8a2967570fe36d1f17a56fe40d53dc21.bindPopup(popup_5916edb2bc6c152553fb0452098e94d0)
+        ;
+
+        
+    
+    
+            var marker_68e02e0592e48ecf5403ef6721b84da1 = L.marker(
+                [49.292217, -123.133397],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_e7602717c4479ec2f1996190822b58db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1788c54c311c5179619dbacc92758940 = $(`<div id="html_1788c54c311c5179619dbacc92758940" style="width: 100.0%; height: 100.0%;">Eastbound W Georgia St @ Denman St</div>`)[0];
+                popup_e7602717c4479ec2f1996190822b58db.setContent(html_1788c54c311c5179619dbacc92758940);
+            
+        
+
+        marker_68e02e0592e48ecf5403ef6721b84da1.bindPopup(popup_e7602717c4479ec2f1996190822b58db)
+        ;
+
+        
+    
+    
+            var marker_50fb2e9672429a7c77f1097052fc3bca = L.marker(
+                [49.28129, -123.108213],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_9ede1915cd75d821793a7707c00aee81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c815cc56c4b0e89fa7faa757d335286 = $(`<div id="html_1c815cc56c4b0e89fa7faa757d335286" style="width: 100.0%; height: 100.0%;">Westbound W Pender St @ Abbott St</div>`)[0];
+                popup_9ede1915cd75d821793a7707c00aee81.setContent(html_1c815cc56c4b0e89fa7faa757d335286);
+            
+        
+
+        marker_50fb2e9672429a7c77f1097052fc3bca.bindPopup(popup_9ede1915cd75d821793a7707c00aee81)
+        ;
+
+        
+    
+    
+            var marker_fc61cfd2d857ffdd57bd3eae2e92012e = L.marker(
+                [49.280707, -123.104998],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_e4b82b02cecfbf87bfa8a598305a7f9f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3019af285a4e1beb58ec29856f12771b = $(`<div id="html_3019af285a4e1beb58ec29856f12771b" style="width: 100.0%; height: 100.0%;">Westbound W Pender St @ Carrall St</div>`)[0];
+                popup_e4b82b02cecfbf87bfa8a598305a7f9f.setContent(html_3019af285a4e1beb58ec29856f12771b);
+            
+        
+
+        marker_fc61cfd2d857ffdd57bd3eae2e92012e.bindPopup(popup_e4b82b02cecfbf87bfa8a598305a7f9f)
+        ;
+
+        
+    
+    
+            var marker_2679de9265acfac8f0f0cc4cc15cc3db = L.marker(
+                [49.284791, -123.115231],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_35e5a41415e38e0ab734fffb6c306e25 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_56c3ee873287105f0371c351bb452086 = $(`<div id="html_56c3ee873287105f0371c351bb452086" style="width: 100.0%; height: 100.0%;">Eastbound W Pender St @ Granville St</div>`)[0];
+                popup_35e5a41415e38e0ab734fffb6c306e25.setContent(html_56c3ee873287105f0371c351bb452086);
+            
+        
+
+        marker_2679de9265acfac8f0f0cc4cc15cc3db.bindPopup(popup_35e5a41415e38e0ab734fffb6c306e25)
+        ;
+
+        
+    
+    
+            var marker_4a666f0b03c7f7cd683801e7dddaafa3 = L.marker(
+                [49.282442, -123.104634],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_8724f3c58f30425e069572881b958ae3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_084914cf350f9dddd68cb8b98e418359 = $(`<div id="html_084914cf350f9dddd68cb8b98e418359" style="width: 100.0%; height: 100.0%;">Eastbound W Cordova St @ Carrall St</div>`)[0];
+                popup_8724f3c58f30425e069572881b958ae3.setContent(html_084914cf350f9dddd68cb8b98e418359);
+            
+        
+
+        marker_4a666f0b03c7f7cd683801e7dddaafa3.bindPopup(popup_8724f3c58f30425e069572881b958ae3)
+        ;
+
+        
+    
+    
+            var marker_6cc6e7ebf419cd1e6803e0d5df3a6570 = L.marker(
+                [49.238592, -123.032425],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_44922bb4e63019043045e1cfc1ced07c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8538bf71e9361c1ce7f152e19743148d = $(`<div id="html_8538bf71e9361c1ce7f152e19743148d" style="width: 100.0%; height: 100.0%;">Joyce Station @ Bay 1 Unload Only</div>`)[0];
+                popup_44922bb4e63019043045e1cfc1ced07c.setContent(html_8538bf71e9361c1ce7f152e19743148d);
+            
+        
+
+        marker_6cc6e7ebf419cd1e6803e0d5df3a6570.bindPopup(popup_44922bb4e63019043045e1cfc1ced07c)
+        ;
+
+        
+    
+    
+            var marker_4e7e9775f230f4fc4cc55d181a2e717b = L.marker(
+                [49.267853, -123.140145],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_2dcc65fa789b2a327e374859f0a37b3a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88f358657e068d0cce30dd00df43da24 = $(`<div id="html_88f358657e068d0cce30dd00df43da24" style="width: 100.0%; height: 100.0%;">Eastbound W 4th Ave @ Fir St</div>`)[0];
+                popup_2dcc65fa789b2a327e374859f0a37b3a.setContent(html_88f358657e068d0cce30dd00df43da24);
+            
+        
+
+        marker_4e7e9775f230f4fc4cc55d181a2e717b.bindPopup(popup_2dcc65fa789b2a327e374859f0a37b3a)
+        ;
+
+        
+    
+    
+            var marker_3f405f90e7d77a340681dbaafed9ef09 = L.marker(
+                [49.280927, -123.005171],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_7f500634ce4e420d1722aae6f69b09c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a6bdf919e74bd783ee64adc61749598 = $(`<div id="html_5a6bdf919e74bd783ee64adc61749598" style="width: 100.0%; height: 100.0%;">Eastbound Hastings St @ Willingdon Ave</div>`)[0];
+                popup_7f500634ce4e420d1722aae6f69b09c1.setContent(html_5a6bdf919e74bd783ee64adc61749598);
+            
+        
+
+        marker_3f405f90e7d77a340681dbaafed9ef09.bindPopup(popup_7f500634ce4e420d1722aae6f69b09c1)
+        ;
+
+        
+    
+    
+            var marker_56887271f394da8969f1b43b0a3f351a = L.marker(
+                [49.274252, -122.791893],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_ea2e981e638e3a50a14b3ac4828458ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9db3b8cda7ff35767680c7471d086821 = $(`<div id="html_9db3b8cda7ff35767680c7471d086821" style="width: 100.0%; height: 100.0%;">Westbound Lougheed Hwy @ Westwood St</div>`)[0];
+                popup_ea2e981e638e3a50a14b3ac4828458ba.setContent(html_9db3b8cda7ff35767680c7471d086821);
+            
+        
+
+        marker_56887271f394da8969f1b43b0a3f351a.bindPopup(popup_ea2e981e638e3a50a14b3ac4828458ba)
+        ;
+
+        
+    
+    
+            var marker_f8c3e176c86f54ea157960f1c620cd01 = L.marker(
+                [49.262926, -123.098697],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_46bece949732d8ce3694dd15aa578745 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00d0ee3930d3bc8950e6795982ea406d = $(`<div id="html_00d0ee3930d3bc8950e6795982ea406d" style="width: 100.0%; height: 100.0%;">Westbound E Broadway @ Scotia St</div>`)[0];
+                popup_46bece949732d8ce3694dd15aa578745.setContent(html_00d0ee3930d3bc8950e6795982ea406d);
+            
+        
+
+        marker_f8c3e176c86f54ea157960f1c620cd01.bindPopup(popup_46bece949732d8ce3694dd15aa578745)
+        ;
+
+        
+    
+    
+            var marker_aff5962837da51d2f5ffaacb2208c093 = L.marker(
+                [49.262593, -123.09009],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_c55ecf448240f16f8a23370c2479af70 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ce541e10aecf9d2d221a9f66f5d2d3f = $(`<div id="html_5ce541e10aecf9d2d221a9f66f5d2d3f" style="width: 100.0%; height: 100.0%;">Westbound E Broadway @ Fraser St</div>`)[0];
+                popup_c55ecf448240f16f8a23370c2479af70.setContent(html_5ce541e10aecf9d2d221a9f66f5d2d3f);
+            
+        
+
+        marker_aff5962837da51d2f5ffaacb2208c093.bindPopup(popup_c55ecf448240f16f8a23370c2479af70)
+        ;
+
+        
+    
+    
+            var marker_9432effc37063a17d71a287eeae3ad66 = L.marker(
+                [49.281362, -123.071174],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_d1ac9c04d1307ec3ad1e95382836ca78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d6227a253fb0453630c2419c0424609 = $(`<div id="html_2d6227a253fb0453630c2419c0424609" style="width: 100.0%; height: 100.0%;">Westbound E Hastings St @ Commercial Dr</div>`)[0];
+                popup_d1ac9c04d1307ec3ad1e95382836ca78.setContent(html_2d6227a253fb0453630c2419c0424609);
+            
+        
+
+        marker_9432effc37063a17d71a287eeae3ad66.bindPopup(popup_d1ac9c04d1307ec3ad1e95382836ca78)
+        ;
+
+        
+    
+    
+            var marker_a6388be2b006d33158dd417d46becd18 = L.marker(
+                [49.286121, -123.117245],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_cf81d7e65769339307fa323d14b6c582 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b06a952b245be4377e340fa478a40a15 = $(`<div id="html_b06a952b245be4377e340fa478a40a15" style="width: 100.0%; height: 100.0%;">Eastbound W Pender St @ Burrard St</div>`)[0];
+                popup_cf81d7e65769339307fa323d14b6c582.setContent(html_b06a952b245be4377e340fa478a40a15);
+            
+        
+
+        marker_a6388be2b006d33158dd417d46becd18.bindPopup(popup_cf81d7e65769339307fa323d14b6c582)
+        ;
+
+        
+    
+    
+            var marker_312a4c5e624bf0c83e94034fdc6310a6 = L.marker(
+                [49.284435, -123.112367],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_6218b62cd275104724ecd0e22a7a1c8f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_74dffe5d80e87d030089d57cbe55bcd4 = $(`<div id="html_74dffe5d80e87d030089d57cbe55bcd4" style="width: 100.0%; height: 100.0%;">Westbound W Hastings St @ Richards St</div>`)[0];
+                popup_6218b62cd275104724ecd0e22a7a1c8f.setContent(html_74dffe5d80e87d030089d57cbe55bcd4);
+            
+        
+
+        marker_312a4c5e624bf0c83e94034fdc6310a6.bindPopup(popup_6218b62cd275104724ecd0e22a7a1c8f)
+        ;
+
+        
+    
+    
+            var marker_555e07bce9d23a74478fd98124e5cb9c = L.marker(
+                [49.247428, -122.894766],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_f9fe7287eee674f836f6db161c6625a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_719628fee7998582d0dfe158758372c6 = $(`<div id="html_719628fee7998582d0dfe158758372c6" style="width: 100.0%; height: 100.0%;">Lougheed Station @ Bay 6</div>`)[0];
+                popup_f9fe7287eee674f836f6db161c6625a6.setContent(html_719628fee7998582d0dfe158758372c6);
+            
+        
+
+        marker_555e07bce9d23a74478fd98124e5cb9c.bindPopup(popup_f9fe7287eee674f836f6db161c6625a6)
+        ;
+
+        
+    
+    
+            var marker_7fa3fe1b08405ebd3c7931561b3d3ece = L.marker(
+                [49.26367, -123.186028],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_72076eed57c755cee89e6e8c899ce18f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e096692bf5543d759cc8b7f99276a019 = $(`<div id="html_e096692bf5543d759cc8b7f99276a019" style="width: 100.0%; height: 100.0%;">Southbound Alma St @ W 10 Ave</div>`)[0];
+                popup_72076eed57c755cee89e6e8c899ce18f.setContent(html_e096692bf5543d759cc8b7f99276a019);
+            
+        
+
+        marker_7fa3fe1b08405ebd3c7931561b3d3ece.bindPopup(popup_72076eed57c755cee89e6e8c899ce18f)
+        ;
+
+        
+    
+    
+            var marker_162677d47cee94cf5da2f4437c18e94b = L.marker(
+                [49.281426, -123.099363],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_30eefad674acee6e9e515d9785161696 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cdd85b109085400a0dd9707b9cd0af7d = $(`<div id="html_cdd85b109085400a0dd9707b9cd0af7d" style="width: 100.0%; height: 100.0%;">Westbound E Hastings St @ Main St</div>`)[0];
+                popup_30eefad674acee6e9e515d9785161696.setContent(html_cdd85b109085400a0dd9707b9cd0af7d);
+            
+        
+
+        marker_162677d47cee94cf5da2f4437c18e94b.bindPopup(popup_30eefad674acee6e9e515d9785161696)
+        ;
+
+        
+    
+    
+            var marker_b3849b98ecdb3a5e33efe9b4c540ccf3 = L.marker(
+                [49.191596, -122.801592],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_bc9c48ba350d22eadbf7e88c86ccd97f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d75f9b2966fd7ec629b84b322101c1ed = $(`<div id="html_d75f9b2966fd7ec629b84b322101c1ed" style="width: 100.0%; height: 100.0%;">Westbound 104 Ave @ 152 St</div>`)[0];
+                popup_bc9c48ba350d22eadbf7e88c86ccd97f.setContent(html_d75f9b2966fd7ec629b84b322101c1ed);
+            
+        
+
+        marker_b3849b98ecdb3a5e33efe9b4c540ccf3.bindPopup(popup_bc9c48ba350d22eadbf7e88c86ccd97f)
+        ;
+
+        
+    
+    
+            var marker_f104882645adc66c6e1ab633803d8ba9 = L.marker(
+                [49.280953, -123.013446],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_c665e83a38a2a0a9dd176d1933348127 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b587f2bbced798a87fefd7655ca147a1 = $(`<div id="html_b587f2bbced798a87fefd7655ca147a1" style="width: 100.0%; height: 100.0%;">Eastbound Hastings St @ Gilmore Ave</div>`)[0];
+                popup_c665e83a38a2a0a9dd176d1933348127.setContent(html_b587f2bbced798a87fefd7655ca147a1);
+            
+        
+
+        marker_f104882645adc66c6e1ab633803d8ba9.bindPopup(popup_c665e83a38a2a0a9dd176d1933348127)
+        ;
+
+        
+    
+    
+            var marker_ed35735646273ad3aa657afe9fc70b84 = L.marker(
+                [49.28264, -123.118529],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_8d67dca8c2a441e8b0fdb042e9a8dbce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_72b3b7feaab0c6863badd73d9f92518d = $(`<div id="html_72b3b7feaab0c6863badd73d9f92518d" style="width: 100.0%; height: 100.0%;">Eastbound W Georgia St @ Granville St</div>`)[0];
+                popup_8d67dca8c2a441e8b0fdb042e9a8dbce.setContent(html_72b3b7feaab0c6863badd73d9f92518d);
+            
+        
+
+        marker_ed35735646273ad3aa657afe9fc70b84.bindPopup(popup_8d67dca8c2a441e8b0fdb042e9a8dbce)
+        ;
+
+        
+    
+    
+            var marker_a4157b0c3829a52a9da073512e714583 = L.marker(
+                [49.260924, -122.781672],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_f4ff0fd696713edca0f37b5600f77a76 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a724cf840c7488d77a9e871271ad8f03 = $(`<div id="html_a724cf840c7488d77a9e871271ad8f03" style="width: 100.0%; height: 100.0%;">Westbound Wilson Ave @ Shaughnessy St</div>`)[0];
+                popup_f4ff0fd696713edca0f37b5600f77a76.setContent(html_a724cf840c7488d77a9e871271ad8f03);
+            
+        
+
+        marker_a4157b0c3829a52a9da073512e714583.bindPopup(popup_f4ff0fd696713edca0f37b5600f77a76)
+        ;
+
+        
+    
+    
+            var marker_b950675d2d2ad860c63eafbb69878585 = L.marker(
+                [49.260938, -122.779124],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_2dd722e255a927e7f7b3755edc107ddc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db8b2b6074c7ee9a2647864ba61968a0 = $(`<div id="html_db8b2b6074c7ee9a2647864ba61968a0" style="width: 100.0%; height: 100.0%;">Westbound Wilson Ave @ Mary Hill Rd</div>`)[0];
+                popup_2dd722e255a927e7f7b3755edc107ddc.setContent(html_db8b2b6074c7ee9a2647864ba61968a0);
+            
+        
+
+        marker_b950675d2d2ad860c63eafbb69878585.bindPopup(popup_2dd722e255a927e7f7b3755edc107ddc)
+        ;
+
+        
+    
+    
+            var marker_39ec55093ead81e3b8e0cb2c0b6aa193 = L.marker(
+                [49.209087, -123.116823],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_84452a37bbd449054dbf74ec54070174 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e05e405c14ed94d4f6955431c32c35c4 = $(`<div id="html_e05e405c14ed94d4f6955431c32c35c4" style="width: 100.0%; height: 100.0%;">Marine Drive Station @ Bay 1</div>`)[0];
+                popup_84452a37bbd449054dbf74ec54070174.setContent(html_e05e405c14ed94d4f6955431c32c35c4);
+            
+        
+
+        marker_39ec55093ead81e3b8e0cb2c0b6aa193.bindPopup(popup_84452a37bbd449054dbf74ec54070174)
+        ;
+
+        
+    
+    
+            var marker_8401d4c42e481e108aaf49574498b74c = L.marker(
+                [49.164174, -123.136423],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_754aec18edcdd22bac397a8b097ed2fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_86209df929f234be298fe6f4a18572fd = $(`<div id="html_86209df929f234be298fe6f4a18572fd" style="width: 100.0%; height: 100.0%;">Northbound No. 3 Rd @ Park Rd</div>`)[0];
+                popup_754aec18edcdd22bac397a8b097ed2fc.setContent(html_86209df929f234be298fe6f4a18572fd);
+            
+        
+
+        marker_8401d4c42e481e108aaf49574498b74c.bindPopup(popup_754aec18edcdd22bac397a8b097ed2fc)
+        ;
+
+        
+    
+    
+            var marker_e10a6b11b2f6ef946c7dc405378c3e93 = L.marker(
+                [49.326849, -123.13825],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_294d130cd2baec2236c294ebb219e1c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_165880d7304502acf8da82275820bd1e = $(`<div id="html_165880d7304502acf8da82275820bd1e" style="width: 100.0%; height: 100.0%;">Park Royal @ Bay 5</div>`)[0];
+                popup_294d130cd2baec2236c294ebb219e1c2.setContent(html_165880d7304502acf8da82275820bd1e);
+            
+        
+
+        marker_e10a6b11b2f6ef946c7dc405378c3e93.bindPopup(popup_294d130cd2baec2236c294ebb219e1c2)
+        ;
+
+        
+    
+    
+            var marker_29ffa183c749b5a6f21a83857f1c8562 = L.marker(
+                [49.266827, -123.241849],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_5497dc86950ba18616f4dbfb6cb53189 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b478f3562572f735ddc753151691634 = $(`<div id="html_6b478f3562572f735ddc753151691634" style="width: 100.0%; height: 100.0%;">Eastbound University Blvd @ Allison Rd</div>`)[0];
+                popup_5497dc86950ba18616f4dbfb6cb53189.setContent(html_6b478f3562572f735ddc753151691634);
+            
+        
+
+        marker_29ffa183c749b5a6f21a83857f1c8562.bindPopup(popup_5497dc86950ba18616f4dbfb6cb53189)
+        ;
+
+        
+    
+    
+            var marker_efe0322befd645797809faa0fb0d7b39 = L.marker(
+                [49.260807, -122.781601],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_1c07fe32e02fde2fc29b06b37ec6f049 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92602dfedb83d021a9b33bcab3210e66 = $(`<div id="html_92602dfedb83d021a9b33bcab3210e66" style="width: 100.0%; height: 100.0%;">Eastbound Wilson Ave @ Shaughnessy St</div>`)[0];
+                popup_1c07fe32e02fde2fc29b06b37ec6f049.setContent(html_92602dfedb83d021a9b33bcab3210e66);
+            
+        
+
+        marker_efe0322befd645797809faa0fb0d7b39.bindPopup(popup_1c07fe32e02fde2fc29b06b37ec6f049)
+        ;
+
+        
+    
+    
+            var marker_ba5b813e276d92ba1d94681cac39f3d0 = L.marker(
+                [49.274107, -122.792389],
+                {}
+            ).addTo(map_7c70051ed0819317c13ec1a3e4701668);
+        
+    
+        var popup_44f819e49514a12e2089256fbe7d9575 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b84b5f2cc92607b635093dca394cdb83 = $(`<div id="html_b84b5f2cc92607b635093dca394cdb83" style="width: 100.0%; height: 100.0%;">Eastbound Lougheed Hwy @ Westwood St</div>`)[0];
+                popup_44f819e49514a12e2089256fbe7d9575.setContent(html_b84b5f2cc92607b635093dca394cdb83);
+            
+        
+
+        marker_ba5b813e276d92ba1d94681cac39f3d0.bindPopup(popup_44f819e49514a12e2089256fbe7d9575)
+        ;
+
+        
+    
+</script>
+</html>

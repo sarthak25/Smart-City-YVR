@@ -1,0 +1,19 @@
+List of Files in Outputs in Each Category
+
+Housing:
+Vancouver Heat Map Html file depicting showing Affordability Index in different Neighbourhoods.
+9 Metrics Data Visualization
+3 Machine Learning Regresson Models Predictions 
+
+Transportation:
+Heat Map Html file showing 100 Busiest Bus Stops 
+Routes Map Html file showing 10 Longest routes 
+trasportation hourl availbility
+
+Transpotation Analytics:
+Metric for Service Availability for each day of the week 
+Trip per Direction 
+
+Energy Data:
+6 Metrics Data Visualizations
+1 Machine Learning (Linear regression)
