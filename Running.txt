@@ -1,0 +1,54 @@
+Instructions To Execute the Project:
+
+1. Environment: The project is designed to run on the Jupyter Notebooks, which can be downloaded from the github.
+-------------------------------------
+Prerequisites: Run on Jupyter command prompt (if you don't have libraries)
+
+1. findspark
+   Installation: pip install findspark
+
+2. numpy
+   Installation: pip install numpy
+
+3. pandas
+   Installation: pip install pandas
+
+4. matplotlib
+   Installation: pip install matplotlib
+
+5. folium
+   Installation: pip install folium
+
+!pip install findspark==1.4.2
+!pip install pyspark==3.1.2
+!pip install numpy==1.21.4
+!pip install pandas==1.3.3
+!pip install matplotlib==3.4.3
+!pip install folium==0.12.1
+
+Dependencies
+Python Version: 3.7
+Spark: 3.1.2
+findspark: 1.4.2
+pyspark: 3.1.2
+numpy: 1.21.4
+pandas: 1.3.3
+matplotlib: 3.4.3
+folium: 0.12.1
+---------------------------------------
+
+Instructions Explanation:
+
+IMPORTANT : Please Trust the Notebooks so that you are able to see all the graphs and outputs.
+
+(Once all the Prerequisites are met, now you are ready to review the project:) 
+
+1. Download the Jupyter Notebooks 
+Housing Data.ipynb
+Energy Data.ipynb
+Transpotation Analytics.ipynb
+Transpotation Visualization.ipynb
+
+2. If you want to execute each command by your own, Please follow download Dataset : Download the files from github
+
+3. Once you have all the files along with Jupyter Notebooks, you will be able to run all the results one by one and by this you can look all the processing and outputs happening.
